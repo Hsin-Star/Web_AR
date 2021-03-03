@@ -53,12 +53,14 @@ AFRAME.registerComponent('cameratransform', {
 
         const posCam = `${[...camtr.toArray()]}`
         const rotCam = `${[...camro.toArray()]}`
- 
+
+	const Mes = this.el.object3D.position;
+ 	const MesCam = `${[...Mes.toArray()]}`
         if(isCameraReady){
             unityInstance.SendMessage("Main Camera", "setProjection", serializedProj);
             unityInstance.SendMessage("Main Camera", "setPosition", posCam);
             unityInstance.SendMessage("Main Camera", "setRotation", rotCam);
-            unityInstance.SendMessage("Main Camera", "GetMessage", this.el.object3D.position.toArray());
+            unityInstance.SendMessage("Main Camera", "GetMessage", MesCam);
 
             let w = window.innerWidth;
             let h = window.innerHeight; 
