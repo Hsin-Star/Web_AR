@@ -58,6 +58,7 @@ AFRAME.registerComponent('cameratransform', {
             unityInstance.SendMessage("Main Camera", "setProjection", serializedProj);
             unityInstance.SendMessage("Main Camera", "setPosition", posCam);
             unityInstance.SendMessage("Main Camera", "setRotation", rotCam);
+            unityInstance.SendMessage("Main Camera", "GetMessage", this.el.object3D.position);
 
             let w = window.innerWidth;
             let h = window.innerHeight; 
