@@ -8,11 +8,12 @@
     <script src="js/lib/aframe-ar.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/aframe-environment-component.min.js"></script>
 
   </head>
 
   <body style="margin: 0px; overflow: hidden;">
-    <a-scene embedded arjs vr-mode-ui="enabled: false" copycanvas>
+    <a-scene environment embedded arjs vr-mode-ui="enabled: false" copycanvas>
       <div id="unityContainer" style="z-index: 2" ></div>
       <!-- <a-marker preset="hiro"> <a-box></a-box> </a-marker> -->
       <!-- <a-marker type="pattern" url="data/markers/pattern-arjs.patt"><a-box></a-box></a-marker> -->
@@ -23,7 +24,7 @@
 			<a-marker type="pattern" url="data/markers\Nutty.patt" markercontroller="name : Nutty"></a-marker>
 			<a-marker type="pattern" url="data/markers\NuttyCardboard.patt" markercontroller="name : NuttyCardboard"></a-marker>
 
-      <a-entity camera look-controls="magicWindowTrackingEnabled: true" position="0 1.6 0" cameratransform></a-entity>
+      <a-entity camera look-controls position="0 1.2 0" cameratransform></a-entity>
     </a-scene>
   </body>
 </html>
