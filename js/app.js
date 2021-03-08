@@ -46,8 +46,7 @@ AFRAME.registerComponent('cameratransform', {
         let camro = new THREE.Quaternion();
         let camsc = new THREE.Vector3();
 
-        //this.el.object3D.matrix.clone().decompose(camtr, camro, camsc);
-	createUnityMatrix(this.el.object3D).decompose(camtr, camro, camsc);
+        this.el.object3D.matrix.clone().decompose(camtr, camro, camsc);
 
         const projection = this.el.components.camera.camera.projectionMatrix.clone();
         const serializedProj = `${[...projection.elements]}`
